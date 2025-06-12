@@ -120,5 +120,6 @@ Built with ❤️ using Terraform and AWS.
 Author: Freddy Shema
 
 📌 Official Website: https://awscloudguy.com
+
 📌 GitHub Profile: https://github.com/shefreddy
 

@@ -10,7 +10,7 @@ This project sets up a fully automated **CI/CD pipeline** using **Terraform**, d
 - Amazon **S3** (stores build artifacts and Terraform state)
 - AWS **VPC, Subnets, Security Groups** (secure networking)
 
----
+```
 ┌────────────────────────────┐
 │        Developer           │
 │  (Push code to GitHub)     │
@@ -62,24 +62,26 @@ This project sets up a fully automated **CI/CD pipeline** using **Terraform**, d
 │ - Blue/Green Deployment    │
 │ - Amazon ALB Switching     │
 └────────────────────────────┘
----
+```
 
 ## 📁 Project Structure
-
+```
 terraform/
-├── main.tf
-├── variables.tf
-├── outputs.tf
-├── backend.tf
-├── iam.tf
+├── static-app                  
+├── variables.tf                   
+├── outputs.tf               
+├── s3.tf          
 ├── vpc.tf
-├── alb.tf
-├── ecs.tf
-├── codedeploy.tf
-├── codebuild.tf
-├── codepipeline.tf
-├── s3.tf
---
+├── main.tf                  
+├── variables.tf                   
+├── outputs.tf               
+├── scs.tf
+├── iam.tf                  
+├── codepipeline.tf                   
+├── codedeploy.tf               
+├── codebuild.tf          
+└── README.md   
+```
 
 
 ## 📂 GitHub Repo Files
@@ -88,7 +90,7 @@ terraform/
 - `appspec.yaml` — CodeDeploy ECS deployment config
 - `ecs-task-def.json` — Optional standalone ECS task definition template
 
----
+```
 
 ## 🛠 Prerequisites
 
@@ -100,7 +102,7 @@ terraform/
   - `buildspec.yml` and `appspec.yaml`
 - GitHub OAuth Token (for CodePipeline access)
 
----
+```
 
 ## 🚀 How to Deploy
 
@@ -109,6 +111,7 @@ terraform/
 ```bash
 git clone https://github.com/shefreddy/terraform-aws-cicd.git
 cd your-repo/terraform-aws-cicd
+```
 
 ## 👨‍💻 Author
 
